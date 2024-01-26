@@ -7,7 +7,7 @@ let state = document.querySelector(".state");
 let image = document.querySelector("img");
 
 const fetchUser = () => {
-  fetch("https://randomuser.me/api/1")
+  fetch("https://randomuser.me/api/")
     .then((response) => {
       if(!response.ok){
         throw new Error('Request Failed')
@@ -15,6 +15,8 @@ const fetchUser = () => {
       return response.json();
     })
     .then((data) => {
+      console.log(data.results[0])
+
       const user = document.querySelector(".user");
 
       // console.log(data.results[0])
