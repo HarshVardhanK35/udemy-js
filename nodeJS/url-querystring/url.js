@@ -4,21 +4,21 @@ URL Methods are:
 1. parse()
 2. format()
 */
-// *****************
+// ***************** 1st Step:
 
 // import url-module using...
 const url = require('url');
 
-// *****************
-
+// ***************** 2nd Step:
 // make a dummy "URL"...
 const myUrl = "https://example.com/listing?id=1924356&premium=true"
 
-// ***************** Parse the URL -> takes the URL link and parses it
-console.log(url.parse(myUrl))
-// returns an object that contains...
+// ***************** Method-1: Parse the URL -> takes the URL link and parses it
+// console.log(url.parse(myUrl))
+
 /*
-protocol, 
+returns an object that contains...
+    -> protocol, slashes, auth, host, port, hostname, hash, query, pathname, path, href
 */
 /*
 Url {
@@ -37,7 +37,16 @@ Url {
 }
 */
 
-// *****************
-
-
-// *****************
+// ***************** Method-2: Format() method -> reverser of parse() method
+//->
+const formatUrl = url.format({
+  protocol: "https",
+  host: "www.example.com",
+  pathname: "listing",
+  query: {
+    id: 192537,
+    premium: true
+  }
+})
+// console.log(formatUrl)
+// -> returns... "https://www.example.com/listing?id=192537&premium=true"
