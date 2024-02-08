@@ -16,7 +16,7 @@ const qs = require("querystring");
 // 1. parse()
 const myQuery = "year=2023&month=jan&day=5"
 const qsParse = qs.parse(myQuery);
-console.log(qsParse)
+// console.log(qsParse)
 
 // -> returns...
 // { year: '2023', month: 'jan', day: '5' }
@@ -29,5 +29,4 @@ const qsStringify = qs.stringify({
   month: 'jan',
   day: '5'
 })
-console.log(qsStringify)
-// *****************
+// console.log(qsStringify)
