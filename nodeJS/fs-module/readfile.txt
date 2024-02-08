@@ -1,0 +1,2 @@
+The fs module was imported using... "const fs = require("fs/promises");"
+Reading a file using "async" and "await"
